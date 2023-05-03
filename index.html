@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assingement 13 Date Methods</title>
+</head>
+
+<body>
+    <script>
+        //question 01
+        // var a = new Date()
+        // document.write(a + "<br>")
+
+        //question 02
+        // var arr = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        // var a = new Date()
+        // var b = a.getMonth()
+        // var d = arr[b];
+        // document.write("Current Month : " + d)
+
+        //question 03
+        // var arr = ["Sun", "Mon", "Tue", "Wed", "Ths", "Fri", "Satu"];
+        // var a = new Date()
+        // var b = a.getDay()
+        // var d = arr[b];
+        // document.write("Today is : " + d)
+
+        //question 04
+        // var a = prompt("Enter you week name");
+        // if(a == "sunday" || a == "saturday"){
+        //    alert("I'ts Fun Day 😎" + a);
+        // }
+        // else{
+        //     alert("Booring Day 😢" + a)
+        // }
+
+        //question 05
+        // var a = new Date();
+        // var b = a.getDate();
+        // if(b < 16){
+        //     document.write("First Fifteen Days Of The Month");
+        // }
+        // else{
+        //     document.write("Lasts Days Of The Month");
+        // }
+
+        //question 06
+        // var currentDate = new Date();
+        // var timestamp = currentDate.getTime();
+        // var minutesSinceEpoch = Math.floor(timestamp / (1000 * 60));
+
+        // console.log(`Minutes since midnight, Jan. 1, 1970: ${minutesSinceEpoch}`);
+
+        // //question 07
+        // var currentTime = new Date();
+        // var currentHour = currentTime.getHours();
+        // if (currentHour < 12) {
+        //     alert("It's AM");
+        // } else {
+        //     alert("It's PM");
+        // }
+
+        // //question 08
+        // var laterDate = new Date(2020, 11, 31);
+        // console.log(laterDate);
+
+        // //question 09
+        // var ramadanStart = new Date('April 13, 2021');
+        // var ramadan2015 = new Date('June 18, 2015');
+        // var daysSinceRamadan2015 = Math.round((ramadanStart - ramadan2015) / (1000 * 60 * 60 * 24));
+        // alert(`Number of days past since 1st Ramadan: ${daysSinceRamadan2015}`);
+
+        // //question 10
+        // var referenceDate = new Date(0);
+        // var beginningOf2015 = new Date('January 1, 2015');
+        // var secondsElapsed = (beginningOf2015.getTime() - referenceDate.getTime()) / 1000;
+        // document.write(`Seconds elapsed between the reference date and the beginning of 2015: ${secondsElapsed}`);
+
+
+        // //question 11
+        // var currentDate = new Date();
+        // var currentHour = currentDate.getHours();
+        // currentDate.setHours(currentHour + 1);
+        // document.write(`Current date and time: ${currentDate}`);
+
+        // //question 12
+        // var currentDate = new Date();
+        // currentDate.setFullYear(currentDate.getFullYear() - 100);
+        // alert(`Date 100 years back: ${currentDate}`);
+
+        // //question 13
+        // var age = parseInt(prompt('Enter your age:'));
+        // var currentDate = new Date();
+        // var currentYear = currentDate.getFullYear();
+        // var birthYear = currentYear - age;
+
+        // document.write(`Your birth year is ${birthYear}`);
+
+        //question 14
+        let customerName = prompt('Enter your name:'); 
+        let currentMonth = new Date().toLocaleString('default', { month: 'long' }); 
+        let unitsConsumed = parseFloat(prompt('Enter the number of units consumed:')); 
+        let perUnitPrice = 16; 
+        let latePaymentCharge = 350; 
+        let netAmountPayable = unitsConsumed * perUnitPrice; 
+        let grossAmountPayable = netAmountPayable + latePaymentCharge; 
+      
+        unitsConsumed = unitsConsumed.toFixed(2);
+        netAmountPayable = netAmountPayable.toFixed(2);
+        grossAmountPayable = grossAmountPayable.toFixed(2);
+
+       
+        document.write(`<h1>K-Electric Bill</h1>
+        <p>Customer Name: ${customerName}</p>
+        <p>Month: ${currentMonth}</p>
+        <p>Number of units consumed: ${unitsConsumed}</p>
+        <p>Price per unit: ${perUnitPrice}</p>
+        <p>Net Amount Payable (within due date): ${netAmountPayable}</p>
+        <p>Late payment surcharge: ${latePaymentCharge}</p>
+        <p>Gross Amount Payable (after due date): ${grossAmountPayable}</p>`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
